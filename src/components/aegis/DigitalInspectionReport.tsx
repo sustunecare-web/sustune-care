@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import {
   FileText,
   Download,
@@ -124,17 +125,28 @@ export default function DigitalInspectionReport() {
         <div className="bg-white text-slate-900 rounded-3xl shadow-2xl border-4 border-[#D4AF37]/40 overflow-hidden">
           {/* Document Top Bar */}
           <div className="bg-[#060e20] text-white p-6 sm:p-8 flex flex-col md:flex-row md:items-center justify-between gap-6 border-b border-white/10">
-            <div className="space-y-1">
-              <div className="flex items-center gap-2">
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#D4AF37] text-[#0B1B3D]">
-                  OFFICIAL AUDIT REPORT
-                </span>
-                <span className="text-xs text-slate-400 font-mono">ID: {reportMetadata.auditId}</span>
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-2xl bg-white p-1 border border-[#D4AF37]/50 shadow-md shrink-0">
+                <Image
+                  src="/logo.png"
+                  alt="Sustune Care Logo"
+                  width={56}
+                  height={56}
+                  className="w-full h-full object-contain"
+                />
               </div>
-              <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
-                {reportMetadata.property}
-              </h3>
-              <p className="text-xs text-slate-300">{reportMetadata.city}</p>
+              <div className="space-y-1">
+                <div className="flex items-center gap-2">
+                  <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded bg-[#D4AF37] text-[#0B1B3D]">
+                    OFFICIAL AUDIT REPORT
+                  </span>
+                  <span className="text-xs text-slate-400 font-mono">ID: {reportMetadata.auditId}</span>
+                </div>
+                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">
+                  {reportMetadata.property}
+                </h3>
+                <p className="text-xs text-slate-300">{reportMetadata.city}</p>
+              </div>
             </div>
 
             <div className="flex items-center gap-4">

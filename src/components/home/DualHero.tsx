@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShieldCheck,
   HeartHandshake,
@@ -37,8 +38,18 @@ export default function DualHero() {
       <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff05_1px,transparent_1px),linear-gradient(to_bottom,#ffffff05_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_0%,#000_70%,transparent_100%)] pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-        {/* Top Institutional Badge */}
-        <div className="flex justify-center mb-6">
+        {/* Top Institutional Emblem & Badge */}
+        <div className="flex flex-col items-center justify-center mb-6">
+          <div className="w-20 h-20 sm:w-24 sm:h-24 p-2 rounded-3xl bg-white border-2 border-[#D4AF37] shadow-2xl mb-4 hover:scale-105 transition-transform">
+            <Image
+              src="/logo.png"
+              alt="Sustune Care Official Emblem"
+              width={96}
+              height={96}
+              className="w-full h-full object-contain"
+              priority
+            />
+          </div>
           <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 border border-[#D4AF37]/40 backdrop-blur-md text-xs font-medium text-slate-200 shadow-sm">
             <span className="w-2 h-2 rounded-full bg-[#D4AF37] animate-pulse" />
             <span className="text-[#F3DC87] font-semibold tracking-wide uppercase text-[11px]">

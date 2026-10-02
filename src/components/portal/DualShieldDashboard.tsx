@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { useCurrency } from "@/context/CurrencyContext";
 import {
   ShieldCheck,
@@ -119,19 +120,30 @@ export default function DualShieldDashboard() {
         <div className="bg-[#0B1B3D] text-white rounded-3xl p-6 sm:p-8 border border-[#D4AF37]/40 shadow-xl mb-8 flex flex-col md:flex-row md:items-center justify-between gap-6 relative overflow-hidden">
           <div className="absolute top-0 right-0 w-80 h-80 bg-[#D4AF37]/10 rounded-full blur-3xl pointer-events-none" />
 
-          <div className="space-y-1 relative z-10">
-            <div className="flex items-center gap-2">
-              <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-[#0B1B3D]">
-                DUAL-SHIELD CLIENT PORTAL
-              </span>
-              <span className="text-xs text-slate-400">Live Client Simulation</span>
+          <div className="flex items-center gap-4 relative z-10">
+            <div className="w-14 h-14 rounded-2xl bg-white p-1 border border-[#D4AF37]/50 shadow-md shrink-0">
+              <Image
+                src="/logo.png"
+                alt="Sustune Care Logo"
+                width={56}
+                height={56}
+                className="w-full h-full object-contain"
+              />
             </div>
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white">
-              Welcome back, Vikram (Seattle, USA)
-            </h1>
-            <p className="text-xs text-slate-300">
-              Assigned Account Director: <strong>Anand V.</strong> &bull; Emergency Response Desk: <strong>Active</strong>
-            </p>
+            <div className="space-y-1">
+              <div className="flex items-center gap-2">
+                <span className="text-[10px] font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full bg-[#D4AF37] text-[#0B1B3D]">
+                  DUAL-SHIELD CLIENT PORTAL
+                </span>
+                <span className="text-xs text-slate-400">Live Client Simulation</span>
+              </div>
+              <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+                Welcome back, Vikram (Seattle, USA)
+              </h1>
+              <p className="text-xs text-slate-300">
+                Assigned Account Director: <strong>Anand V.</strong> &bull; Emergency Response Desk: <strong>Active</strong>
+              </p>
+            </div>
           </div>
 
           {/* Quick Dual Switcher Tabs */}
